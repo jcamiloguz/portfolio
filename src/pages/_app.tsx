@@ -1,11 +1,12 @@
+import { Layout } from "@/components/Layout"
 import "@/styles/globals.css"
 
 import { Inter, Montserrat } from "@next/font/google"
 
 import type { AppProps } from "next/app"
 
-const inter = Inter({ subsets: ['latin'] })
-const montserrat = Montserrat({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
+const montserrat = Montserrat({ subsets: ["latin"] })
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         `}
       </style>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }
