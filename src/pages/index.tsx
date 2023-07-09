@@ -1,7 +1,28 @@
 import Image from "next/image"
 import profileImg from "@/assets/images/profile.png"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
+import { createClient } from "contentful"
+import { IHomePage, IHomePageFields, IHomePageSkeleton } from "@/types"
 
-export default function Home() {
+const client = createClient({
+  space: process.env.SPACE_ID ?? "",
+  accessToken: process.env.CONTENT_DELIVERY_TOKEN ?? "", // delivery API key for the space \
+})
+
+export const getStaticProps = async () => {
+  const response = await client.getEntry<IHomePageSkeleton>(
+    "5uXKARgsS4d3skB1vXQVb3"
+  )
+  console.log(response)
+
+  return {
+    props: response,
+  }
+}
+
+export default function Home({
+  fields,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <section className="flex items-center gap-20">
@@ -13,12 +34,8 @@ export default function Home() {
           </figure>
         </div>
         <div className="">
-          <h1 className=" text-4xl font-bold text-light">
-            Hi! I’m Juan Guzman.
-          </h1>
-          <h2 className="text-2xl font-normal text-light">
-            I’m software developer, focused in web technologies.{" "}
-          </h2>
+          <h1 className=" text-4xl font-bold text-light">{fields.title}</h1>
+          <h2 className="text-2xl font-normal text-light">{fields.subtitle}</h2>
         </div>
       </section>
       <section></section>
