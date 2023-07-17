@@ -13,7 +13,6 @@ export const getStaticProps = async () => {
   const response = await client.getEntry<IHomePageSkeleton>(
     "5uXKARgsS4d3skB1vXQVb3"
   )
-  console.log(response)
 
   return {
     props: response,
@@ -34,12 +33,12 @@ export default function Home({
           </figure>
         </div>
         <div className="">
-          <h1 className=" text-4xl font-bold text-light">{fields.title}</h1>
-          <h2 className="text-2xl font-normal text-light">{fields.subtitle}</h2>
+          <h1 className=" font-Mont text-4xl font-bold text-light">
+            {fields.title}
+          </h1>
+          <h2 className="font-Mont text-2xl  text-light">{fields.subtitle}</h2>
         </div>
       </section>
-      <section></section>
-      <section></section>
     </>
   )
 }

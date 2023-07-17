@@ -5,7 +5,7 @@ import React from "react"
 
 const Header = () => {
   return (
-    <header className="mx-auto mt-[70px] flex h-[70px] max-w-[854px] items-center justify-between">
+    <header className="mx-auto mt-[70px] flex h-[70px] w-[90%] max-w-[854px] items-center justify-between">
       <div className="flex items-center justify-center">
         <Link href="/">
           <MainIcon />

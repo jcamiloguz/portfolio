@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {`
           :root {
             --inter-font: ${inter.style.fontFamily};
-            --inter-font: ${montserrat.style.fontFamily};
+            --montserrat-font: ${montserrat.style.fontFamily};
           }
         `}
       </style>
