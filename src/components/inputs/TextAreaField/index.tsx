@@ -3,11 +3,10 @@ import { ErrorMessage, useField } from "formik"
 interface Props {
   name: string
   label: string
-  type: "email" | "password" | "text"
   placeholder: string
 }
 
-function TextField({ name, label, type, placeholder }: Props) {
+function TextAreaField({ name, label, placeholder }: Props) {
   const [field] = useField(name)
 
   return (
@@ -18,19 +17,18 @@ function TextField({ name, label, type, placeholder }: Props) {
       >
         {label}
       </label>
-      <input
-        type={type}
+      <textarea
         name={name}
         id={name}
         value={field.value}
         onChange={field.onChange}
         placeholder={placeholder}
         onBlur={field.onBlur}
-        className="w-full border-b-[3px] border-b-pink bg-light px-3 py-2 text-base text-dark outline-none  "
+        className="min-h-[188px] w-full border-b-[3px] border-b-pink bg-light px-3 py-2 text-base text-dark  outline-none"
       />
       <ErrorMessage name={name} component="span" className="text-pink" />
     </>
   )
 }
 
-export default TextField
+export default TextAreaField
