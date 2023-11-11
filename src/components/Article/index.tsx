@@ -22,7 +22,15 @@ function Article({ article }: { article: IArticle }) {
         text-2xl text-light
       "
       >
-        {article.description}
+        {article.description}{" "}
+        <a
+          className="cursor-pointer text-2xl text-pink underline"
+          href={article.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read more
+        </a>
       </p>
     </article>
   )
