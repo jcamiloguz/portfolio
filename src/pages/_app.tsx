@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout"
 import "@/styles/globals.css"
 
-import { Inter, Montserrat } from "@next/font/google"
+import { Inter, Montserrat } from "next/font/google"
 
 import type { AppProps } from "next/app"
 
