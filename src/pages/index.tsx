@@ -24,7 +24,7 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <section className="flex flex-col items-center gap-20 md:flex-row">
+      <section className="flex flex-col items-center gap-8 md:flex-row md:gap-20">
         <div className="flex  aspect-square w-full max-w-[354px] items-center">
           <figure className="flr flex aspect-square  w-full max-w-[354px] animate-fade items-center rounded-full bg-pink">
             <picture className=" Header aspect-square max-w-[84%] animate-fade overflow-hidden rounded-full bg-dark">

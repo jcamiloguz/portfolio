@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
 const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <h1 className="mb-16 mt-[52px] font-Mont text-4xl font-bold text-light">
+      <h1 className="mb-8 font-Mont text-4xl font-bold text-light md:mb-16">
         Blog
       </h1>
       <div className="flex flex-col gap-[74px]">
