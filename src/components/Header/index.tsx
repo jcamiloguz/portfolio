@@ -25,7 +25,7 @@ const Header = () => {
             className="border-b-2 border-b-transparent text-lg font-bold text-light transition-all hover:border-pink md:text-2xl"
             activeClassName="!border-pink"
           >
-            Contact
+            Contact me
           </ActiveLink>
         </ul>
       </nav>

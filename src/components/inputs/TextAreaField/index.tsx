@@ -13,7 +13,7 @@ function TextAreaField({ name, label, placeholder }: Props) {
     <>
       <label
         htmlFor={name}
-        className="text-gray-700 mb-2 block  text-2xl text-light"
+        className="text-gray-700 mb-2 block  text-xl text-light"
       >
         {label}
       </label>
